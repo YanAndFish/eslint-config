@@ -1,0 +1,7 @@
+{
+  "extends": "@yafh/tsconfig/tsconfig.lib.json",
+  "include": ["./packages/**/*.ts"],
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

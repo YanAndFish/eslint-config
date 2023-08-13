@@ -1,0 +1,27 @@
+{
+  "name": "@yafh/eslint-plugin-yafh",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/antfu/eslint-config",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.2",
+    "eslint": "^8.47.0",
+    "tsup": "^7.2.0",
+    "vitest": "^0.34.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  }
+}

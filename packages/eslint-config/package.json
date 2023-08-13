@@ -1,0 +1,35 @@
+{
+  "name": "@yafh/eslint-config",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "private": true,
+  "description": "Eslint configuration for YanAndFish",
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "author": "YanAndFish <383904425@qq.com>",
+  "homepage": "https://github.com/YanAndFish/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanAndFish/eslint-config.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  },
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "@antfu/eslint-config": "^0.40.2",
+    "@yafh/eslint-plugin-yafh": "workspace:*"
+  }
+}
