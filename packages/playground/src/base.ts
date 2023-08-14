@@ -1,4 +1,3 @@
-import { Foo } from '@vicons/antd'
+/* eslint-disable unused-imports/no-unused-imports */
 
-// eslint-disable-next-line no-unused-expressions
-Foo
+import IconBar, { Foo as Iconfoo } from '@vicons/antd'

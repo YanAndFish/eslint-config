@@ -1,5 +1,5 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
-import type { TSESTree } from '@typescript-eslint/types'
+import { AST_NODE_TYPES, type TSESTree } from '@typescript-eslint/types'
 
 export type Matcher = string | string[] | RegExp
 
@@ -14,4 +14,8 @@ export function isSourceOf(node: TSESTree.ImportDeclaration, matcher: Matcher): 
     return source.startsWith(matcher)
   else
     return matcher.some(m => source.startsWith(m))
+}
+
+export function isAliasImportSpecifier(node: TSESTree.ImportClause): boolean {
+  return node.type === AST_NODE_TYPES.ImportSpecifier && (node.imported.range[0] !== node.local.range[0] || node.imported.range[1] !== node.local.range[1])
 }

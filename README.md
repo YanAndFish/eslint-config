@@ -1,8 +1,8 @@
 # @yafh/eslint-config
 
-- The configuration of this repository is based on [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+The configuration of this repository is based on [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 
-** change in this config **
+### change in this config
 
 - `no-console` set to warn and allow `console.warn` and `console.error`
 

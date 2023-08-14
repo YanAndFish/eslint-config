@@ -1,8 +1,8 @@
 // rules
-import iconPrefix from './rules/icon-prefix'
+import iconComponentPrefix from './rules/icon-component-prefix'
 
 export default {
   rules: {
-    'icon-prefix': iconPrefix,
+    'icon-component-prefix': iconComponentPrefix,
   },
 }
