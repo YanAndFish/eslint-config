@@ -4,7 +4,7 @@ type Options = [Matcher, string]
 type MessageIds = 'missingIconPrefix'
 
 export default createRule<Options, MessageIds>({
-  name: 'import-prefix',
+  name: 'icon-prefix',
   meta: {
     type: 'problem',
     docs: {

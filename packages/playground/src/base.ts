@@ -1,3 +1,4 @@
-const a = 1
+import { Foo } from '@vicons/antd'
 
-class Foo {}
+// eslint-disable-next-line no-unused-expressions
+Foo

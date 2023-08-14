@@ -2,7 +2,7 @@
   "name": "@yafh/eslint-plugin-yafh",
   "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/eslint-config",
+  "homepage": "https://github.com/yafh/eslint-config",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "files": [
