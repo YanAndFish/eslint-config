@@ -2,17 +2,18 @@
   "name": "@yafh/eslint-plugin-yafh",
   "version": "0.0.1",
   "license": "MIT",
-  "type": "module",
   "homepage": "https://github.com/antfu/eslint-config",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "watch": "tsup --watch"
   },
   "dependencies": {
+    "@typescript-eslint/types": "^6.3.0",
     "@typescript-eslint/utils": "^6.2.1"
   },
   "devDependencies": {

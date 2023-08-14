@@ -1,5 +1,8 @@
-import type { ESLint } from 'eslint'
+// rules
+import iconPrefix from './rules/icon-prefix'
 
 export default {
-  rules: {},
-} as ESLint.Plugin
+  rules: {
+    'icon-prefix': iconPrefix,
+  },
+}

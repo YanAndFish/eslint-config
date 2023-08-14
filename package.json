@@ -11,7 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "@yafh/eslint-config": "workspace:*",
-    "@yafh/tsconfig": "^0.1.0",
+    "@yafh/eslint-plugin-yafh": "workspace:*",
+    "@yafh/tsconfig": "^0.1.1",
     "@types/node": "^20.4.8",
     "bumpp": "^9.1.1",
     "eslint": "^8.47.0",

@@ -1,3 +1,6 @@
 {
-  "extends": "@yafh"
+  "extends": "@yafh",
+  "rules": {
+    "@yafh/yafh/icon-prefix": ["warn", "@typescript-eslint", "TS"]
+  }
 }

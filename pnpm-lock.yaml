@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -10,9 +14,12 @@ importers:
       '@yafh/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
+      '@yafh/eslint-plugin-yafh':
+        specifier: workspace:*
+        version: link:packages/eslint-plugin-yafh
       '@yafh/tsconfig':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
       bumpp:
         specifier: ^9.1.1
         version: 9.1.1
@@ -38,6 +45,9 @@ importers:
 
   packages/eslint-plugin-yafh:
     dependencies:
+      '@typescript-eslint/types':
+        specifier: ^6.3.0
+        version: 6.3.0
       '@typescript-eslint/utils':
         specifier: ^6.2.1
         version: 6.3.0(eslint@8.47.0)(typescript@5.1.6)
@@ -776,8 +786,8 @@ packages:
       pretty-format: 29.6.2
     dev: true
 
-  /@yafh/tsconfig@0.1.0:
-    resolution: {integrity: sha512-4GXBgmpzHhZ+IUpjS69uaJDiFlY7TLmkvKKrI76TxhztSR1kgLqDOytpQmNL1F3uv1sveXzYqVkx5dSUv/M0vQ==}
+  /@yafh/tsconfig@0.1.1:
+    resolution: {integrity: sha512-qyp8xBIxyQVB8DiTdLVufIt+aOX0uHU/Z6Nfyf9ZxulbyIN06xMOmuJJ5klUyEVUX4U1FKEDM0thvwDH3Xso5Q==}
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.10.0):
