@@ -1,7 +1,7 @@
 /** @type {import('eslint').Linter.Config} */
 const config = {
   extends: ['@antfu'],
-  plugins: ['@yafh/yafh'],
+  plugins: ['@yafh'],
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
   },

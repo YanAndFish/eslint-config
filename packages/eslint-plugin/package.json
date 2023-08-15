@@ -1,5 +1,5 @@
 {
-  "name": "@yafh/eslint-plugin-yafh",
+  "name": "@yafh/eslint-plugin",
   "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/yafh/eslint-config",

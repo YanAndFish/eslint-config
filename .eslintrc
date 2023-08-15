@@ -1,6 +1,6 @@
 {
   "extends": "@yafh",
   "rules": {
-    "@yafh/yafh/icon-component-prefix": ["warn"]
+    "@yafh/icon-component-prefix": ["warn"]
   }
 }

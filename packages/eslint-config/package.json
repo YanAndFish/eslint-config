@@ -30,6 +30,6 @@
   ],
   "dependencies": {
     "@antfu/eslint-config": "^0.40.2",
-    "@yafh/eslint-plugin-yafh": "workspace:*"
+    "@yafh/eslint-plugin": "workspace:*"
   }
 }
