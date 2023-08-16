@@ -10,10 +10,10 @@
   "author": "YanAndFish <383904425@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.4.8",
     "@yafh/eslint-config": "workspace:*",
     "@yafh/eslint-plugin": "workspace:*",
     "@yafh/tsconfig": "^0.1.1",
-    "@types/node": "^20.4.8",
     "bumpp": "^9.1.1",
     "eslint": "^8.47.0",
     "typescript": "^5.1.6"

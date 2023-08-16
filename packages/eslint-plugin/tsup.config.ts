@@ -8,4 +8,5 @@ export default defineConfig({
   splitting: true,
   cjsInterop: true,
   target: 'node16',
+  treeshake: true,
 })
