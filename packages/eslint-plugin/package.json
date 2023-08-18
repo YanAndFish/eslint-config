@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/YanAndFish/eslint-config",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "module": "./dist/index.mjs",
   "files": [
-    "dist"
+    "dist",
+    "index.js"
   ],
   "scripts": {
     "build": "tsup",

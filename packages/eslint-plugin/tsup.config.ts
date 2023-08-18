@@ -6,7 +6,5 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   dts: false,
   splitting: true,
-  cjsInterop: true,
   target: 'node16',
-  treeshake: true,
 })
