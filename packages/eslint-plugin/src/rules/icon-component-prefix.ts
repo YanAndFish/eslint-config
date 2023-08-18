@@ -3,9 +3,10 @@ import { type Matcher, createRule, isAliasImportSpecifier, isSourceOf } from '..
 
 type Options = [Matcher, string]
 type MessageIds = 'missingIconComponentPrefix'
+export const name = 'icon-component-prefix'
 
 export default createRule<Options, MessageIds>({
-  name: 'icon-component-prefix',
+  name,
   meta: {
     type: 'problem',
     docs: {
@@ -15,7 +16,7 @@ export default createRule<Options, MessageIds>({
     fixable: 'code',
     schema: [
       {
-        type: ['string', 'array', 'object'],
+        type: ['string', 'array'],
         description: 'Icon Component source matcher',
       },
       {
@@ -27,7 +28,7 @@ export default createRule<Options, MessageIds>({
       missingIconComponentPrefix: 'Expect icon component prefix \'{{prefix}}\'',
     },
   },
-  defaultOptions: ['@vicons', 'Icon'],
+  defaultOptions: [['@ricons', '@vicons', '@v2icons', '@sicons'], 'Icon'],
   create: (context, options) => {
     return {
       ImportDeclaration(node) {

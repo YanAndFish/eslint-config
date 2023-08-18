@@ -1,7 +1,7 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
 import { AST_NODE_TYPES, type TSESTree } from '@typescript-eslint/types'
 
-export type Matcher = string | string[] | RegExp
+export type Matcher = string | string[]
 
 export const createRule = ESLintUtils.RuleCreator(name => name)
 

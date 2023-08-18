@@ -1,7 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 const config = {
-  extends: ['@antfu'],
-  plugins: ['@yafh'],
+  extends: ['@antfu', 'plugin:@yafh/recommended'],
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
   },

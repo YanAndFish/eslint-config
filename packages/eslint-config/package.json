@@ -2,7 +2,6 @@
   "name": "@yafh/eslint-config",
   "version": "0.0.1",
   "type": "commonjs",
-  "private": true,
   "description": "Eslint configuration for YanAndFish",
   "keywords": [
     "eslint",
@@ -29,7 +28,6 @@
     "*.js"
   ],
   "dependencies": {
-    "@antfu/eslint-config": "^0.40.2",
-    "@yafh/eslint-plugin": "workspace:*"
+    "@antfu/eslint-config": "^0.40.2"
   }
 }
