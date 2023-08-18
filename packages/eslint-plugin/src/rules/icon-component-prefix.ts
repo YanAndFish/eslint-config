@@ -8,7 +8,7 @@ export const name = 'icon-component-prefix'
 export default createRule<Options, MessageIds>({
   name,
   meta: {
-    type: 'problem',
+    type: 'suggestion',
     docs: {
       description: '',
       recommended: 'recommended',
