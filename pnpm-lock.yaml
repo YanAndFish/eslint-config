@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -31,6 +35,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^0.40.2
         version: 0.40.2(eslint@8.47.0)(typescript@5.1.6)
+      '@yafh/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
     devDependencies:
       eslint:
         specifier: ^8.47.0
