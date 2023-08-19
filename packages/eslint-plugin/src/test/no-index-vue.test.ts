@@ -16,11 +16,11 @@ const ruleTester: RuleTester = new RuleTester({
 })
 
 ruleTester.run(name, rule as any, {
-  valid: valids.map((e) => ({
+  valid: valids.map(e => ({
     code: '',
     filename: e,
   })),
-  invalid: invalids.map((e) => ({
+  invalid: invalids.map(e => ({
     code: '',
     filename: e,
     errors: [{ messageId: 'noIndexVue' }],
