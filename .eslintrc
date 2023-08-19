@@ -1,6 +1,3 @@
 {
-  "extends": ["@yafh"],
-  "rules": {
-    "@yafh/no-index-vue": "error"
-  }
+  "extends": ["@yafh"]
 }
