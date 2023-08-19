@@ -10,6 +10,9 @@
     "url": "git+https://github.com/YanAndFish/eslint-config.git"
   },
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "./dist/index.mjs",
   "files": [
     "dist",
