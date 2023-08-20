@@ -9,6 +9,8 @@ const valids = [
   '// foo/// bar',
   '// ////foo',
   '//foo',
+  '/// <reference types="vite/client" />',
+  '/// <amd-module />   ',
 ]
 // should fail
 const invalids = [
@@ -21,6 +23,14 @@ const invalids = [
     '//  foo',
   ],
   ['///foo', '//foo'],
+  [
+    '/// <amd-module />   sss',
+    '// <amd-module />   sss',
+  ],
+  [
+    '///////// <reference types="vite/client" />',
+    '// <reference types="vite/client" />',
+  ],
 ]
 
 const ruleTester: RuleTester = new RuleTester({

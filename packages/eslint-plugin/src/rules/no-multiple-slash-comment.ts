@@ -1,8 +1,16 @@
+import { AST_TOKEN_TYPES, type TSESTree } from '@typescript-eslint/utils'
 import { createRule } from '../utils'
 
 type Options = []
 type MessageIds = 'noMultipleSlashComment'
 export const name = 'no-multiple-slash-comment'
+
+function isTripleSlashDirectives(comment: TSESTree.Comment): boolean {
+  if (comment.type !== AST_TOKEN_TYPES.Line)
+    return false
+
+  return /^\/\s*<(amd-module|amd-dependency|reference){1}.*\/>\s*$/.test(comment.value)
+}
 
 export default createRule<Options, MessageIds>({
   name,
@@ -25,6 +33,7 @@ export default createRule<Options, MessageIds>({
       Program() {
         sourceCode.getAllComments()
           .filter(comment => comment.type === 'Line')
+          .filter(comment => !isTripleSlashDirectives(comment))
           .filter(comment => /^\/+/.test(comment.value))
           .forEach((comment) => {
             context.report({
