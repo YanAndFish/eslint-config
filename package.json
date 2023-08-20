@@ -7,6 +7,11 @@
     "eslint",
     "config"
   ],
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx .",
+    "bump": "bumpp -r"
+  },
   "author": "YanAndFish <383904425@qq.com>",
   "license": "MIT",
   "devDependencies": {
