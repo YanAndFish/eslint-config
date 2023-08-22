@@ -16,6 +16,11 @@ export function isSourceOf(node: TSESTree.ImportDeclaration, matcher: Matcher): 
     return matcher.some(m => source.startsWith(m))
 }
 
+export function isSourceOfRegExp(node: TSESTree.ImportDeclaration, matcher: RegExp): boolean {
+  const source = node.source.value
+  return matcher.test(source)
+}
+
 export function isAliasImportSpecifier(node: TSESTree.ImportClause): boolean {
   return node.type === AST_NODE_TYPES.ImportSpecifier && (node.imported.range[0] !== node.local.range[0] || node.imported.range[1] !== node.local.range[1])
 }
