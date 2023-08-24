@@ -7,4 +7,5 @@ export default defineConfig({
   dts: false,
   splitting: true,
   target: 'node16',
+  minify: true,
 })
