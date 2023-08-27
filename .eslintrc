@@ -1,3 +1,6 @@
 {
-  "extends": ["@yafh"]
+  "extends": ["@yafh"],
+  "rules": {
+    "@yafh/no-default-import": ["error", "node:fs"]
+  }
 }

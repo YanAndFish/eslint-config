@@ -5,15 +5,26 @@ export type Matcher = string | string[]
 
 export const createRule = ESLintUtils.RuleCreator(name => name)
 
-export function isSourceOf(node: TSESTree.ImportDeclaration, matcher: Matcher): boolean {
-  const source = node.source.value
+function normalizeSource(source: string): string {
+  return source.toLowerCase().trim()
+}
 
-  if (matcher instanceof RegExp)
-    return matcher.test(source)
-  else if (typeof matcher === 'string')
-    return source.startsWith(matcher)
+export function isStrictSourceOf(node: TSESTree.ImportDeclaration, matcher: Matcher): boolean {
+  const source = normalizeSource(node.source.value)
+
+  if (typeof matcher === 'string')
+    return source === matcher
   else
-    return matcher.some(m => source.startsWith(m))
+    return matcher.some(m => source.startsWith(normalizeSource(m)))
+}
+
+export function isSourceOf(node: TSESTree.ImportDeclaration, matcher: Matcher): boolean {
+  const source = normalizeSource(node.source.value)
+
+  if (typeof matcher === 'string')
+    return source.startsWith(normalizeSource(matcher))
+  else
+    return matcher.some(m => source.startsWith(normalizeSource(m)))
 }
 
 export function isSourceOfRegExp(node: TSESTree.ImportDeclaration, matcher: RegExp): boolean {
