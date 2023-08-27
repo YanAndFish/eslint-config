@@ -1,6 +1,6 @@
 {
   "name": "@yafh/eslint-config",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "type": "commonjs",
   "description": "Eslint configuration for YanAndFish",
   "keywords": [
