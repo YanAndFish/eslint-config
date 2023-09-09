@@ -20,10 +20,12 @@ ruleTester.run(name, rule as any, {
   valid: valids.map(e => ({
     code: '',
     filename: e,
+    options: ['vue'],
   })),
   invalid: invalids.map(e => ({
     code: '',
     filename: e,
     errors: [{ messageId: 'missingPascalCaseComponentName' }],
+    options: [['tsx', 'vue']] as any,
   })),
 })

@@ -24,16 +24,16 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@typescript-eslint/types": "^6.3.0",
-    "@typescript-eslint/utils": "^6.2.1",
+    "@typescript-eslint/types": "^6.6.0",
+    "@typescript-eslint/utils": "^6.6.0",
     "pascal-case": "^3.1.2"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.2",
-    "@typescript-eslint/rule-tester": "^6.4.0",
-    "eslint": "^8.47.0",
+    "@typescript-eslint/rule-tester": "^6.6.0",
+    "eslint": "^8.49.0",
     "tsup": "^7.2.0",
-    "vitest": "^0.34.1"
+    "vitest": "^0.34.4"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"

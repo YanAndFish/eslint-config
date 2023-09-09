@@ -2,7 +2,7 @@ import { basename } from 'node:path'
 import { pascalCase, pascalCaseTransformMerge } from 'pascal-case'
 import { createRule } from '../utils'
 
-type Options = []
+type Options = [string | string[]]
 type MessageIds = 'missingPascalCaseComponentName'
 
 export const name = 'pascal-case-component-name'
@@ -15,17 +15,22 @@ export default createRule<Options, MessageIds>({
       description: '',
       recommended: 'recommended',
     },
-    schema: [],
+    schema: [
+      {
+        type: ['string', 'array'],
+        description: 'Component file extensions',
+      },
+    ],
     messages: {
-      missingPascalCaseComponentName: 'Vue component name must be PascalCase. e.g. {{pascalCase}}',
+      missingPascalCaseComponentName: 'Component name must be PascalCase. e.g. {{pascalCase}}',
     },
   },
-  defaultOptions: [],
-  create: (context) => {
+  defaultOptions: ['vue'],
+  create: (context, options) => {
     return {
       Program() {
         const baseName = basename(context.getFilename())
-        if (!baseName.endsWith('.vue'))
+        if (!RegExp(`\\.(${Array.isArray(options[0]) ? options[0].join('|') : options[0]})$`).test(baseName))
           return
 
         const fileName = baseName.split('.')[0]

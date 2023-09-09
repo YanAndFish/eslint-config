@@ -5,6 +5,7 @@ import noMultipleSlashComment from './rules/no-multiple-slash-comment'
 import pascalCaseComponentName from './rules/pascal-case-component-name'
 import noCjsIconComponent from './rules/no-cjs-icon-component'
 import noDefaultImport from './rules/no-default-import'
+import configs from './configs'
 
 export default {
   rules: {
@@ -15,18 +16,5 @@ export default {
     'no-cjs-icon-component': noCjsIconComponent,
     'no-default-import': noDefaultImport,
   },
-  configs: {
-    recommended: {
-      plugins: ['@yafh'],
-      rules: {
-        '@yafh/icon-component-prefix': 'error',
-        '@yafh/no-cjs-icon-component': 'error',
-        '@yafh/no-multiple-slash-comment': 'error',
-
-        // vue
-        '@yafh/no-index-vue': 'error',
-        '@yafh/pascal-case-component-name': 'error',
-      },
-    },
-  },
+  configs,
 }

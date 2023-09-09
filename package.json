@@ -18,9 +18,9 @@
     "@types/node": "^20.4.8",
     "@yafh/eslint-config": "workspace:*",
     "@yafh/eslint-plugin": "workspace:*",
-    "@yafh/tsconfig": "^0.1.1",
-    "bumpp": "^9.1.1",
-    "eslint": "^8.47.0",
-    "typescript": "^5.1.6"
+    "@yafh/tsconfig": "^0.3.0",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
   }
 }

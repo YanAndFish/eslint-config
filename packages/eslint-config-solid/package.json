@@ -1,11 +1,12 @@
 {
-  "name": "@yafh/eslint-config",
+  "name": "@yafh/eslint-config-solid",
   "version": "0.4.1",
   "type": "commonjs",
-  "description": "Eslint configuration for YanAndFish",
+  "description": "Solid eslint configuration for YanAndFish",
   "keywords": [
     "eslint",
-    "config"
+    "config",
+    "solid"
   ],
   "author": "YanAndFish <383904425@qq.com>",
   "homepage": "https://github.com/YanAndFish/eslint-config",
@@ -29,6 +30,8 @@
   ],
   "dependencies": {
     "@antfu/eslint-config": "^0.41.0",
-    "@yafh/eslint-plugin": "workspace:*"
+    "@antfu/eslint-config-ts": "^0.41.0",
+    "@yafh/eslint-plugin": "workspace:*",
+    "eslint-plugin-solid": "^0.13.0"
   }
 }
