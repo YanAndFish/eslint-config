@@ -45,9 +45,6 @@ importers:
 
   packages/eslint-config-solid:
     dependencies:
-      '@antfu/eslint-config':
-        specifier: ^0.41.0
-        version: 0.41.0(eslint@8.47.0)(typescript@5.2.2)
       '@antfu/eslint-config-ts':
         specifier: ^0.41.0
         version: 0.41.0(eslint@8.47.0)(typescript@5.2.2)

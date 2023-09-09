@@ -29,7 +29,6 @@
     "*.js"
   ],
   "dependencies": {
-    "@antfu/eslint-config": "^0.41.0",
     "@antfu/eslint-config-ts": "^0.41.0",
     "@yafh/eslint-plugin": "workspace:*",
     "eslint-plugin-solid": "^0.13.0"
