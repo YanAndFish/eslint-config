@@ -1,0 +1,1 @@
+[document](https://github.com/YanAndFish/eslint-config#readme)

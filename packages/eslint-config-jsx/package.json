@@ -1,12 +1,12 @@
 {
-  "name": "@yafh/eslint-config-solid",
+  "name": "@yafh/eslint-config-jsx",
   "version": "0.5.0",
   "type": "commonjs",
-  "description": "Solid eslint configuration for YanAndFish",
+  "description": "JSX eslint configuration for YanAndFish",
   "keywords": [
     "eslint",
     "config",
-    "solid"
+    "jsx"
   ],
   "author": "YanAndFish <383904425@qq.com>",
   "homepage": "https://github.com/YanAndFish/eslint-config",
@@ -29,9 +29,6 @@
     "*.js"
   ],
   "dependencies": {
-    "@antfu/eslint-config-ts": "^0.41.0",
-    "@yafh/eslint-config-jsx": "workspace:*",
-    "@yafh/eslint-plugin": "workspace:*",
-    "eslint-plugin-solid": "^0.13.0"
+    "eslint-plugin-react": "^7.33.2"
   }
 }

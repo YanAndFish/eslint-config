@@ -23,10 +23,19 @@
   "devDependencies": {
     "eslint": "^8.47.0"
   },
-  "main": "index.js",
   "files": [
-    "*.js"
+    "*.js",
+    "*.d.ts"
   ],
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./utils": {
+      "types": "./utils.d.ts",
+      "default": "./utils.js"
+    }
+  },
   "dependencies": {
     "@antfu/eslint-config": "^0.41.0",
     "@yafh/eslint-plugin": "workspace:*"
