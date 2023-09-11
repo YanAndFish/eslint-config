@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^20.4.8",
     "@yafh/eslint-config": "workspace:*",
+    "@yafh/eslint-config-solid": "workspace:*",
     "@yafh/eslint-plugin": "workspace:*",
     "@yafh/tsconfig": "^0.3.0",
     "bumpp": "^9.2.0",

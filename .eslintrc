@@ -1,5 +1,5 @@
 {
-  "extends": ["@yafh"],
+  "extends": ["@yafh/eslint-config-solid"],
   "rules": {
     "@yafh/no-default-import": ["error", "node:fs"]
   }
