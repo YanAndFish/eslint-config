@@ -6,6 +6,5 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   dts: false,
   splitting: true,
-  target: 'node16',
-  minify: true,
+  target: 'node16'
 })
