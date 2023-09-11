@@ -16,11 +16,11 @@ function rules(rules: any) {
 
 export default {
   'recommended': rules({}),
-  'recommended-vue': rules({
+  'vue-recommended': rules({
     '@yafh/no-index-vue': 'error',
     '@yafh/pascal-case-component-name': 'error',
   }),
-  'recommended-solid': rules({
-    '@yafh/pascal-case-component-name': ['error', 'tsx'],
+  'solid-recommended': rules({
+    '@yafh/pascal-case-component-name': ['error', ['tsx', 'jsx']],
   }),
 }
