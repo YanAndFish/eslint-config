@@ -1,5 +1,5 @@
 import { basename } from 'node:path'
-import { createRule } from '../utils'
+import { createRule } from '../utils/common'
 
 type Options = []
 type MessageIds = 'noIndexVue'

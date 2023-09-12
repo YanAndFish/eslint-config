@@ -1,5 +1,5 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types'
-import { type Matcher, createRule, isAliasImportSpecifier, isSourceOf } from '../utils'
+import { type Matcher, createRule, isAliasImportSpecifier, isSourceOf } from '../utils/common'
 
 type Options = [Matcher, string]
 type MessageIds = 'missingIconComponentPrefix'

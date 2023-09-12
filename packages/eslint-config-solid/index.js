@@ -31,5 +31,8 @@ module.exports = {
     // handle for eslint-plugin-react
     'solid/jsx-no-duplicate-props': 'off',
     'solid/self-closing-comp': 'off',
+
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    '@typescript-eslint/brace-style': ['error', '1tbs'],
   },
 }

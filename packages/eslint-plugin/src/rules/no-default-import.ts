@@ -1,4 +1,4 @@
-import { createRule, isStrictSourceOf } from '../utils'
+import { createRule, isStrictSourceOf } from '../utils/common'
 
 type Options = [string | string[]]
 type MessageIds = 'noDefaultImport' | 'noWrokspaceImport'

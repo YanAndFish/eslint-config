@@ -1,6 +1,6 @@
 import { basename } from 'node:path'
 import { pascalCase, pascalCaseTransformMerge } from 'pascal-case'
-import { createRule } from '../utils'
+import { createRule } from '../utils/common'
 
 type Options = [string | string[]]
 type MessageIds = 'missingPascalCaseComponentName'
