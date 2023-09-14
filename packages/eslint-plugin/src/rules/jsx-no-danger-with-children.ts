@@ -1,5 +1,6 @@
+import type { TSESTree } from '@typescript-eslint/types'
 import { createRule } from '../utils/common'
-import { findJsxProp, findObjectProp, isLineBreak, variablesInScope } from '../utils/jsx'
+import { findJsxProp, findObjectProp, isJsxEmptyExpression, isLineBreak, variablesInScope } from '../utils/jsx'
 
 type Options = [{
   propsName?: string | string[]
@@ -26,7 +27,7 @@ export default createRule<Options, MessageIds>({
       jsxNoDangerWithChildren: 'Only set one of `children` or {{props}}',
     },
   },
-  defaultOptions: [{ propsName: ['innerHTML'], rendererName: ['createElement', 'createComponent'] }],
+  defaultOptions: [{ propsName: ['innerHTML', 'dangerouslySetInnerHTML'], rendererName: ['createElement', 'createComponent'] }],
   create: (context, options) => {
     const propName = Array.isArray(options[0].propsName) ? options[0].propsName! : [options[0].propsName!]
     const rendererName = Array.isArray(options[0].rendererName) ? options[0].rendererName! : [options[0].rendererName!]
@@ -35,22 +36,21 @@ export default createRule<Options, MessageIds>({
       JSXElement(node) {
         let hasChildren = false
 
-        if (node.children.length && !isLineBreak(node.children[0]))
+        if (node.children.length && !node.children.every(e => isLineBreak(e) || isJsxEmptyExpression(e)))
           hasChildren = true
-        else if (findJsxProp(node, 'children'))
+        else if (findJsxProp(context, node, 'children'))
           hasChildren = true
 
         if (
           node.openingElement.attributes
           && hasChildren
-          && findJsxProp(node, 'dangerouslySetInnerHTML')
+          && findJsxProp(context, node, propName)
         ) {
           context.report({
             node,
             messageId: 'jsxNoDangerWithChildren',
             data: {
-              // TODO
-              props: options[0],
+              props: propName.map(e => `props.${e}`).join(' or '),
             },
           })
         }
@@ -65,18 +65,18 @@ export default createRule<Options, MessageIds>({
         ) {
           let hasChildren = false
 
-          let props = node.arguments[1]
+          let props: any = node.arguments[1]
 
           if (props.type === 'Identifier') {
-            const variable = variablesInScope(context).find(item => item.name === props.name)
-            if (variable && variable.defs.length && variable.defs[0].node.init)
-              props = variable.defs[0].node.init
+            const variable = variablesInScope(context).find(item => item.name === (props as TSESTree.Identifier).name)
+            if (variable && variable.defs.length && (variable.defs[0].node as any).init)
+              props = (variable.defs[0].node as any).init
           }
 
-          const dangerously = findObjectProp(props, 'dangerouslySetInnerHTML', [])
+          const dangerously = findObjectProp(context, props, propName, [])
 
           if (node.arguments.length === 2) {
-            if (findObjectProp(props, 'children', []))
+            if (findObjectProp(context, props, 'children', []))
               hasChildren = true
           } else {
             hasChildren = true
@@ -87,8 +87,7 @@ export default createRule<Options, MessageIds>({
               node,
               messageId: 'jsxNoDangerWithChildren',
               data: {
-              // TODO
-                props: options[0],
+                props: propName.map(e => `props.${e}`).join(' or '),
               },
             })
           }

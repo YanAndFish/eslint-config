@@ -1,6 +1,7 @@
 {
   "extends": ["@yafh/eslint-config-solid"],
   "rules": {
-    "@yafh/no-default-import": ["error", "node:fs"]
+    "@yafh/no-default-import": ["error", "node:fs"],
+    "react/no-danger-with-children": "error"
   }
 }
