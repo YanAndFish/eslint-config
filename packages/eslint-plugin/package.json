@@ -1,6 +1,6 @@
 {
   "name": "@yafh/eslint-plugin",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT",
   "description": "Eslint plugin for YanAndFish",
   "author": "YanAndFish <383904425@qq.com>",
