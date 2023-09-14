@@ -1,5 +1,5 @@
 import { AST_TOKEN_TYPES, type TSESTree } from '@typescript-eslint/utils'
-import { createRule } from '../utils'
+import { createRule } from '../utils/common'
 
 type Options = []
 type MessageIds = 'noMultipleSlashComment'

@@ -1,4 +1,4 @@
-import { createRule, isSourceOfRegExp } from '../utils'
+import { createRule, isSourceOfRegExp } from '../utils/common'
 
 type Options = []
 type MessageIds = 'noCjsIconCompnoent'

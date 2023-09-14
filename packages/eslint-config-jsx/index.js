@@ -1,3 +1,8 @@
+// TODO: Correctly importing from common packages
+// eslint-disable-next-line n/prefer-global/process
+const isInEditor = !!(process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI
+const errorWithoutEditor = isInEditor ? 'off' : 'error'
+
 module.exports = {
   plugins: ['react'],
   settings: {
@@ -52,8 +57,21 @@ module.exports = {
     ],
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-leaked-render': 'error',
     'react/jsx-no-target-blank': ['error', { enforceDynamicLinks: 'always' }],
     'react/jsx-no-undef': ['error', { allowGlobals: true }],
+    'react/jsx-no-script-url': 'error',
+    'react/jsx-no-useless-fragment': errorWithoutEditor,
+    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    'react/jsx-sort-props': [
+      errorWithoutEditor,
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        multiline: 'last',
+        reservedFirst: true,
+      },
+    ],
     'react/jsx-pascal-case': ['error', { allowAllCaps: false }],
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-tag-spacing': [
@@ -65,7 +83,6 @@ module.exports = {
         beforeClosing: 'never',
       },
     ],
-    'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': [
       'error',
@@ -80,11 +97,6 @@ module.exports = {
       },
     ],
     'react/no-children-prop': 'error',
-    'react/no-danger-with-children': 'error',
-    'react/no-deprecated': 'error',
-    'react/no-direct-mutation-state': 'error',
-    'react/no-find-dom-node': 'error',
-    'react/no-is-mounted': 'error',
     'react/no-string-refs': [
       'error',
       {
@@ -97,8 +109,6 @@ module.exports = {
         forbid: ['>', '}'],
       },
     ],
-    'react/no-render-return-value': 'error',
-    'react/require-render-return': 'error',
-    'react/self-closing-comp': 'error',
+    'react/self-closing-comp': errorWithoutEditor,
   },
 }

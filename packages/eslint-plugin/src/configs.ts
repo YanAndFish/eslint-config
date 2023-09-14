@@ -22,5 +22,6 @@ export default {
   }),
   'solid-recommended': rules({
     '@yafh/pascal-case-component-name': ['error', ['tsx', 'jsx']],
+    '@yafh/jsx-no-danger-with-children': 'error',
   }),
 }
