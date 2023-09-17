@@ -1,3 +1,5 @@
+const errorWithoutEditor = require('./utils').errorWithoutEditor
+
 module.exports = {
   plugins: ['solid'],
   extends: ['@antfu/eslint-config-ts', 'plugin:@yafh/solid-recommended', '@yafh/eslint-config-jsx'],
@@ -32,7 +34,7 @@ module.exports = {
     'solid/jsx-no-duplicate-props': 'off',
     'solid/self-closing-comp': 'off',
 
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'no-console': [errorWithoutEditor('warn'), { allow: ['warn', 'error'] }],
     '@typescript-eslint/brace-style': ['error', '1tbs'],
   },
 }

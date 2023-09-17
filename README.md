@@ -4,7 +4,7 @@ The configuration of this repository is based on [@antfu/eslint-config](https://
 
 ### change in this config
 
-- `no-console` set to warn and allow `console.warn` and `console.error`
+- `no-console` set to warn in editor, and allow `console.warn` and `console.error`
 - `brace-style` set to `1tbs`
 
 ## Usage
